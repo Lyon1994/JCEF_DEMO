@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Setup/lib/win64"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry kind="src" path="jars"/>
+	<classpathentry kind="src" path="webapps"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="jars/win64/gluegen-rt-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="jars/win64/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="jars/win64/jcef.jar"/>
+	<classpathentry kind="lib" path="jars/win64/jogl-all-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="jars/win64/jogl-all.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
