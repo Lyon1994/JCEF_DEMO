@@ -158,6 +158,8 @@ public class MainFrame extends JFrame {
 		// replace
 		// "OS.isLinux()" with "true" and recompile.
 		// new MainFrame("http://www.google.com", OS.isLinux(), false);
-		new MainFrame("http://m.baidu.com", OS.isLinux(), false);
+//		new MainFrame("http://m.baidu.com", OS.isLinux(), false);
+
+		new MainFrame(MainFrame.class.getResource("/")+"index.html", OS.isLinux(), false);
 	}
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>E掌柜服务端</title>
+<link rel="stylesheet" href="mdl/material.min.css">
+<script src="mdl/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
+	<div
+		class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--overlay-drawer-button">
+		<div class="mdl-layout__drawer">
+			<span class="mdl-layout-title">E掌柜服务端安装</span>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link left_tab_after_click"
+					href="#left-tab-1" onclick="left_tab_click(this,1);">欢迎</a> <a
+					class="mdl-navigation__link" href="#left-tab-2"
+					onclick="left_tab_click(this,2);">检测运行环境</a> <a
+					class="mdl-navigation__link" href="#left-tab-3"
+					onclick="left_tab_click(this,3);">安装</a> <a
+					class="mdl-navigation__link" href="#left-tab-4"
+					onclick="left_tab_click(this,4);">完成</a>
+			</nav>
+		</div>
+		<main class="mdl-layout__content">
+		<section class="mdl-layout__tab-panel is-active" id="left-tab-1">
+
+			<div class="page-content">
+				<!-- Wide card with share menu button -->
+				<style>
+.demo-card-wide {
+	margin: auto;
+	margin-top: 20px;
+}
+
+.demo-card-wide.mdl-card {
+	width: 90%;
+	height: 90%;
+}
+
+.demo-card-wide>.mdl-card__title {
+	color: #fff;
+	height: 350px;
+	background: url('img/welcome_background.png') center/cover;
+}
+</style>
+
+				<div class="mdl-card mdl-shadow--2dp demo-card-wide">
+					<div class="mdl-card__title">
+						<h2 class="mdl-card__title-text">Welcome</h2>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<!-- Simple Textfield -->
+						<form action="#">
+							<span class=".mdl-textfield__label">请选择安装路径</span>
+							<div class="mdl-textfield mdl-js-textfield textfield-demo">
+								<input class="mdl-textfield__input" type="text"
+									id="install_path" /> <label class="mdl-textfield__label"
+									for="install_path"></label>
+							</div>
+						</form>
+					</div>
+					<div class="mdl-card__actions mdl-card--border"
+						style="text-align: right;">
+						<a href="javascript:sa();"
+							class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							安 装 </a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="left-tab-2">
+
+			<div class="page-content">
+				<!-- Your content goes here -->
+				<h1>欢迎来到E掌柜快速安装服务</h1>
+				<!-- Accent-colored raised button with ripple -->
+				<button onclick="window.app.exit();"
+					class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
+					Button</button>
+				<!-- Colored FAB button -->
+				<button
+					class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+					<i class="material-icons">add</i>
+				</button>
+				<div id="container" />
+				<script>
+					var button = document.createElement('button');
+					var textNode = document.createTextNode('Click Me!');
+					button.appendChild(textNode);
+					button.className = 'mdl-button mdl-js-button mdl-js-ripple-effect';
+					componentHandler.upgradeElement(button, 'MaterialButton');
+					document.getElementById('container').appendChild(button);
+				</script>
+			</div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="left-tab-3"></section>
+		<section class="mdl-layout__tab-panel" id="left-tab-4"></section>
+
+		</main>
+		<script type="text/javascript">
+			function sa() {
+				htmlobj = $.ajax({
+					url : "http://m.baidu.com",
+					async : false
+				});
+				document.write('s:'+htmlobj.responseText);
+				//alert(htmlobj.responseText);
+			}
+		</script>
+	</div>
+</body>
+</html>

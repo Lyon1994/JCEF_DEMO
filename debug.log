@@ -96,3 +96,5 @@
 [0612/153020:ERROR:renderer_main.cc(226)] Running without renderer sandbox
 [0612/153031:ERROR:ipc_channel_win.cc(132)] pipe error: 109
 [0728/172012:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0807/095145:ERROR:renderer_main.cc(226)] Running without renderer sandbox
+[0807/095406:ERROR:renderer_main.cc(226)] Running without renderer sandbox
