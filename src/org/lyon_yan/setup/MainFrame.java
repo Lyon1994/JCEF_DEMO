@@ -8,8 +8,6 @@ import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
@@ -18,9 +16,6 @@ import org.cef.CefApp;
 import org.cef.CefClient;
 import org.cef.OS;
 import org.cef.browser.CefBrowser;
-import org.cef.callback.CefCommandLine;
-import org.cef.callback.CefSchemeRegistrar;
-import org.cef.handler.CefAppHandler;
 
 /**
  * This is a simple example application using JCEF. It displays a JFrame with a
@@ -125,26 +120,26 @@ public class MainFrame extends JFrame {
 		// call
 		// the method "dispose()" of the CefApp instance if the Java
 		// application will be closed. Otherwise you'll get asserts from CEF.
-		addWindowListener(new WindowAdapter() {
-			@Override
-			public void windowClosing(WindowEvent e) {
-				new Thread() {
-					public void run() {
-						try {
-							Thread.sleep(1500);
-							System.gc();
-							Thread.sleep(1500);
-							System.exit(0);
-						} catch (InterruptedException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-					};
-				}.start();
-				dispose();
-				cefApp_.dispose();
-			}
-		});
+//		addWindowListener(new WindowAdapter() {
+//			@Override
+//			public void windowClosing(WindowEvent e) {
+//				new Thread() {
+//					public void run() {
+//						try {
+//							Thread.sleep(1500);
+//							System.gc();
+//							Thread.sleep(1500);
+//							System.exit(0);
+//						} catch (InterruptedException e1) {
+//							// TODO Auto-generated catch block
+//							e1.printStackTrace();
+//						}
+//					};
+//				}.start();
+//				dispose();
+//				cefApp_.dispose();
+//			}
+//		});
 	}
 
 	public static void main(String[] args) {
